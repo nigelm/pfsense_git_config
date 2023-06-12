@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "pfsense-git-config"
+version = "0.1.0"
+description = "pfSense Git Config"
+authors = ["Nigel Metheringham <nigel.metheringham@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pfsense_git_config"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+rich = "^13.4.2"
+typer = "^0.9.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+pfsense_git_config = "pfsense_git_config.main:app"
+
+# end
