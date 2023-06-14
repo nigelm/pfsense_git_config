@@ -25,6 +25,8 @@ def read_configs(config_dir: Path) -> List[Dict[str, Any]]:
                 logger.debug(f"result = {datum}")
                 data.append(datum)
 
+    # make sure the records are sorted by time
+    data.sort(key=lambda record: record["time"])
     return data
 
 
