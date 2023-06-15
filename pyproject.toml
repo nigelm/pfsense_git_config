@@ -13,6 +13,8 @@ rich = "^13.4.2"
 typer = "^0.9.0"
 loguru = "^0.7.0"
 defusedxml = "^0.7.1"
+gitpython = "^3.1.31"
+pytz = "^2023.3"
 
 [build-system]
 requires = ["poetry-core"]

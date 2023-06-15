@@ -1,4 +1,4 @@
-import pprint
+# import pprint
 from pathlib import Path
 from typing import Any
 from typing import Dict
@@ -37,7 +37,7 @@ def main(
     debug: Annotated[bool, typer.Option(help="Output debug information.")] = False,
     verbose: Annotated[bool, typer.Option(help="Output verbose information.")] = False,
     config_dir: Annotated[Path, typer.Option()] = Path("/conf/backup"),
-    git_dir: Annotated[Path, typer.Option()] = Path("."),
+    git_dir: Annotated[Path, typer.Option()] = Path.home() / "pfsense_config",
 ):
     """
     Common options for the app.
@@ -70,7 +70,7 @@ def test():
 @app.command()
 def git_config():
     config_set = pfsense_configs.read_configs(state["config_dir"])
-    pprint.pp(config_set)
+    # pprint.pp(config_set)
     git_repo.config_into_git_repo(config_set=config_set, git_dir=state["git_dir"])
 
 
