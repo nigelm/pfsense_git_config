@@ -43,10 +43,14 @@ def build_config_commit(config: Dict[str, Any], git_dir: Path, repo: Repo):
     shutil.copyfile(config["path"], git_dir / "config.xml")
     repo.index.add(["timestamp", "config.xml"])
     author_name, description = config["description"].split(": ", maxsplit=1)
+    timestamp = datetime.datetime.fromtimestamp(config["time"], tz=TZ)
+    author = Actor(name=author_name, email="pfsense@example.com")
     repo.index.commit(
         message=description,
-        author_date=datetime.datetime.fromtimestamp(config["time"], tz=TZ),
-        author=Actor(name=author_name, email="pfsense@example.com"),
+        author_date=timestamp,
+        commit_date=timestamp,
+        author=author,
+        committer=author,
     )
 
 
