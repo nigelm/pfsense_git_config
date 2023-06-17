@@ -8,8 +8,8 @@ import yaml
 from loguru import logger
 from typing_extensions import Annotated
 
-from . import git_repo
 from . import pfsense_configs
+from .git_repo import PfsenseGitRepo
 
 # -----------------------------------------------------------------------
 app = typer.Typer()
@@ -69,9 +69,11 @@ def test():
 # -----------------------------------------------------------------------
 @app.command()
 def git_config():
-    config_set = pfsense_configs.read_configs(state["config_dir"])
-    # pprint.pp(config_set)
-    git_repo.config_into_git_repo(config_set=config_set, git_dir=state["git_dir"])
+    repo = PfsenseGitRepo(git_dir=state["git_dir"])
+    repo.pull()
+    config_set = pfsense_configs.read_configs(state["config_dir"], minimum_timestamp=repo.repo_timestamp)
+    repo.configs_into_git_repo(config_set=config_set)
+    repo.push()
 
 
 # -----------------------------------------------------------------------
