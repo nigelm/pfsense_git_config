@@ -36,7 +36,7 @@ def main(
     config: Annotated[str, typer.Option(callback=config_callback, is_eager=True)] = ".pfsense_git_configrc",
     debug: Annotated[bool, typer.Option(help="Output debug information.")] = False,
     verbose: Annotated[bool, typer.Option(help="Output verbose information.")] = False,
-    config_dir: Annotated[Path, typer.Option()] = Path("/conf/backup"),
+    config_dir: Annotated[Path, typer.Option()] = Path("/conf"),
     git_dir: Annotated[Path, typer.Option()] = Path.home() / "pfsense_config",
 ):
     """
