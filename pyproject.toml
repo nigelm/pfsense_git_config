@@ -44,5 +44,6 @@ commit_version_number = true
 patch_without_tag = true
 build_command = "poetry build"
 upload_to_pypi = false
+commit_subject = "chore: release {version}"
 
 # end
