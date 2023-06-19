@@ -90,7 +90,7 @@ def pfsense_git_config(
         logger.debug("Will write verbose output")
     else:
         logger.remove(0)  # replace default handler
-        logger.add(sys.stderr, level="DEBUG")
+        logger.add(sys.stderr, level="INFO")
 
     if not config_dir.is_dir():
         typer.echo(f"config_dir must exist and be a directory - {config_dir}")
