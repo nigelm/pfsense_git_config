@@ -8,6 +8,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!--next-version-placeholder-->
 
+## v0.4.0 (2023-06-19)
+
+### Feature
+
+* Restructure for release ([`5b0435a`](https://github.com/Home/pfsense_git_config/commit/5b0435a217a1618aad49bc70a7a644e091055e3a))
+
+### Documentation
+
+* Set up CHANGELOG ([`b2516b6`](https://github.com/Home/pfsense_git_config/commit/b2516b64c4aaf75c1f910bd9199540c0560f6ddb))
+
 
 ## v0.3.0 (2023-06-17)
 
