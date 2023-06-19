@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!--next-version-placeholder-->
 
+## v0.4.1 (2023-06-19)
+
+### Fix
+
+* Make lack of verbose be actually less verbose ([`8b5b498`](https://github.com/Home/pfsense_git_config/commit/8b5b49885b56207653025ab231895a7c1893d63a))
+* Change to shell not csh syntax ([`98ed9ed`](https://github.com/Home/pfsense_git_config/commit/98ed9ed327890f53be364daa2ba682b2dc7e5615))
+
 ## v0.4.0 (2023-06-19)
 
 ### Feature
