@@ -16,6 +16,9 @@ defusedxml = "^0.7.1"
 gitpython = "^3.1.31"
 pytz = "^2023.3"
 
+[tool.poetry.group.dev.dependencies]
+python-semantic-release = "^7.34.6"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
@@ -27,5 +30,19 @@ pfsense_git_config = "pfsense_git_config.main:app"
 [tool.ruff]
 line-length = 150
 ignore = ["F821"]
+
+[tool.semantic_release]
+## the branch below must match .gitlab-ci.yml
+branch = "main"
+version_toml = [ "pyproject.toml:tool.poetry.version" ]
+version_pattern = [
+    'README.md:Version: `(\d+\.\d+\.\d+)`',
+    'pfsense_git_config/__init__.py:__version__ = "(\d+\.\d+\.\d+)"',
+]
+version_source = "tag"
+commit_version_number = true
+patch_without_tag = true
+build_command = "poetry build"
+upload_to_pypi = false
 
 # end
