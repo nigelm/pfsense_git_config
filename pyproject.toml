@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pfsense-git-config"
-version = "0.4.3"
+version = "0.4.4"
 description = "pfSense Git Config"
 authors = ["Nigel Metheringham <nigel.metheringham@gmail.com>"]
 readme = "README.md"
