@@ -4,7 +4,7 @@ Import pfSense config changes into a git repo.
 
 ## Current Version
 
-Version: `0.4.2`
+Version: `0.4.3`
 
 ## Usage
 

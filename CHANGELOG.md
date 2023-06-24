@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!--next-version-placeholder-->
 
+## v0.4.3 (2023-06-24)
+
+### Documentation
+
+* Add some install instructions ([`ed8d454`](https://github.com/nigelm/pfsense_git_config/commit/ed8d4546dfa3c60e18ba5870ad8ae9201771a646))
+
 ## v0.4.2 (2023-06-24)
 
 ### Fix
