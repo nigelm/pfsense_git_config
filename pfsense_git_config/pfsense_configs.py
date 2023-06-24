@@ -32,8 +32,10 @@ def read_configs(config_dir: Path, minimum_timestamp: Optional[int] = None) -> L
 
     # read through the backup config files
     for config_file in config_dir.glob("backup/*.xml"):
+        logger.debug(f"Examining {config_file}")
         try:
-            timestamp = int(config_file.name.split(".")[1])
+            timestamp = int(config_file.name.split("-", maxsplit=1)[1].split(".", maxsplit=1)[0])
+            logger.debug(f"Timestamp is {timestamp}")
         except ValueError:
             timestamp = 0
         if minimum_timestamp is None or timestamp >= minimum_timestamp:
@@ -41,7 +43,7 @@ def read_configs(config_dir: Path, minimum_timestamp: Optional[int] = None) -> L
             if datum:
                 data.append(datum)
 
-    # read the curent active config
+    # always read the curent active config
     datum = read_config(config_dir / "config.xml")
     if datum:
         data.append(datum)
