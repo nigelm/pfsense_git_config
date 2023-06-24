@@ -1,0 +1,31 @@
+name: Overall Release Process
+on: workflow_dispatch
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    concurrency: release
+    environment: deployment
+
+    steps:
+      - name: Set up repository
+        uses: nigelm/gh_actions_python_poetry_setup@v2
+        with:
+          python-version: 3.11.4
+          poetry-version: 1.5.1
+          # needs fetch-depth to be set due to release history deduction
+          fetch-depth: 0
+          token: ${{ secrets.GH_DEPLOY_TOKEN }}
+
+      #----------------------------------------------
+      # release
+      #----------------------------------------------
+      - name: Semantic Release
+        env:
+          GH_TOKEN: ${{ secrets.GH_DEPLOY_TOKEN }}
+        run: |
+          # source .venv/bin/activate
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          poetry run semantic-release publish
+
+# end
