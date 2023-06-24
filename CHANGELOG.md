@@ -8,6 +8,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 <!--next-version-placeholder-->
 
+## v0.4.2 (2023-06-24)
+
+### Fix
+
+* Make timestamp parsing in filename work ([`fdde5bf`](https://github.com/Home/pfsense_git_config/commit/fdde5bf9abc6c13147e5c7a901503a208bc5b70c))
+* Improve handling of user and description ([`beeaed0`](https://github.com/Home/pfsense_git_config/commit/beeaed0500be88b32b3dec30db152ef13d1f60dd))
+
 ## v0.4.1 (2023-06-19)
 
 ### Fix
