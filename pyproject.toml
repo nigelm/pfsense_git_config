@@ -4,6 +4,8 @@ version = "0.4.2"
 description = "pfSense Git Config"
 authors = ["Nigel Metheringham <nigel.metheringham@gmail.com>"]
 readme = "README.md"
+homepage = "https://pypi.org/project/pfsense-git-config/"
+repository = "https://github.com/nigelm/pfsense_git_config"
 packages = [{include = "pfsense_git_config"}]
 
 [tool.poetry.dependencies]
@@ -45,5 +47,6 @@ patch_without_tag = true
 build_command = "poetry build"
 upload_to_pypi = false
 commit_subject = "chore: release {version}"
+check_build_status = false
 
 # end
