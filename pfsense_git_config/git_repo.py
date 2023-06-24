@@ -1,4 +1,5 @@
 import datetime
+import html
 import re
 import shutil
 from dataclasses import dataclass
@@ -59,8 +60,8 @@ class PfsenseGitRepo:
 
     # -----------------------------------------------------------------------
     def config_author(self, config: Dict[str, Any]) -> Actor:
-        author = config["username"]
-        match = re.match(r"[a-zA-Z0-9_\.-]+@[a-zA-Z0-9_\.-]+", author)
+        author = html.unescape(config["username"])
+        match = re.match(r"[a-zA-Z0-9_\.-]+@[a-zA-Z0-9_\.:-]+", author)
         if match:
             author = match[0]
         return Actor(name=author, email=self.commit_email)
@@ -72,10 +73,10 @@ class PfsenseGitRepo:
         shutil.copyfile(config["path"], self.git_dir / "config.xml")
         self.repo.index.add(["timestamp", "config.xml"])
         author = self.config_author(config)
-        _, description = config["description"].split(": ", maxsplit=1)
+        description = config["description"].removeprefix(config["username"] + ": ")
         commit_timestamp = datetime.datetime.fromtimestamp(config["time"], tz=self.tz)
         self.repo.index.commit(
-            message=description,
+            message=html.unescape(description),
             author_date=commit_timestamp,
             commit_date=commit_timestamp,
             author=author,
