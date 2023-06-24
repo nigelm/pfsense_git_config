@@ -10,10 +10,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## v0.4.4 (2023-06-24)
 
-
-
-## v0.4.3 (2023-06-24)
-
 ### Documentation
 
 * Add some install instructions ([`ed8d454`](https://github.com/nigelm/pfsense_git_config/commit/ed8d4546dfa3c60e18ba5870ad8ae9201771a646))
@@ -22,25 +18,25 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fix
 
-* Make timestamp parsing in filename work ([`fdde5bf`](https://github.com/Home/pfsense_git_config/commit/fdde5bf9abc6c13147e5c7a901503a208bc5b70c))
-* Improve handling of user and description ([`beeaed0`](https://github.com/Home/pfsense_git_config/commit/beeaed0500be88b32b3dec30db152ef13d1f60dd))
+* Make timestamp parsing in filename work ([`fdde5bf`](https://github.com/nigelm/pfsense_git_config/commit/fdde5bf9abc6c13147e5c7a901503a208bc5b70c))
+* Improve handling of user and description ([`beeaed0`](https://github.com/nigelm/pfsense_git_config/commit/beeaed0500be88b32b3dec30db152ef13d1f60dd))
 
 ## v0.4.1 (2023-06-19)
 
 ### Fix
 
-* Make lack of verbose be actually less verbose ([`8b5b498`](https://github.com/Home/pfsense_git_config/commit/8b5b49885b56207653025ab231895a7c1893d63a))
-* Change to shell not csh syntax ([`98ed9ed`](https://github.com/Home/pfsense_git_config/commit/98ed9ed327890f53be364daa2ba682b2dc7e5615))
+* Make lack of verbose be actually less verbose ([`8b5b498`](https://github.com/nigelm/pfsense_git_config/commit/8b5b49885b56207653025ab231895a7c1893d63a))
+* Change to shell not csh syntax ([`98ed9ed`](https://github.com/nigelm/pfsense_git_config/commit/98ed9ed327890f53be364daa2ba682b2dc7e5615))
 
 ## v0.4.0 (2023-06-19)
 
 ### Feature
 
-* Restructure for release ([`5b0435a`](https://github.com/Home/pfsense_git_config/commit/5b0435a217a1618aad49bc70a7a644e091055e3a))
+* Restructure for release ([`5b0435a`](https://github.com/nigelm/pfsense_git_config/commit/5b0435a217a1618aad49bc70a7a644e091055e3a))
 
 ### Documentation
 
-* Set up CHANGELOG ([`b2516b6`](https://github.com/Home/pfsense_git_config/commit/b2516b64c4aaf75c1f910bd9199540c0560f6ddb))
+* Set up CHANGELOG ([`b2516b6`](https://github.com/nigelm/pfsense_git_config/commit/b2516b64c4aaf75c1f910bd9199540c0560f6ddb))
 
 
 ## v0.3.0 (2023-06-17)
