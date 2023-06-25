@@ -12,7 +12,7 @@ the changes easily.
 
 ## Current Version
 
-Version: `0.4.4`
+Version: `1.0.0`
 
 ## Usage
 
