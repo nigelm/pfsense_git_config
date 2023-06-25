@@ -2,6 +2,14 @@
 
 Import pfSense config changes into a git repo.
 
+This gives you a record of individual config updates, and allows you to browse
+the changes easily.
+
+> **_NOTE:_** Your pfSense config data is sensitive - it will contain hashed
+> passwords and information about the networks served by your firewall. I would
+> only keep this on a private git server and with access restrictions on the
+> repo as well.
+
 ## Current Version
 
 Version: `0.4.4`
